@@ -1,0 +1,49 @@
+Script started on 2022-04-11 20:41:06+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="231" LINES="54"]
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ doicker[K[K[K[Kc[K[Kcker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                      PORTS     NAMES
+28369ab02557   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 56 seconds ago             relaxed_gauss
+f8c688e3ea62   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 53 seconds ago             bold_johnson
+2d64b7784ea1   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute           80/tcp    romantic_cartwright
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       latest    825d55fb6340   5 days ago    72.8MB
+alpine       latest    0ac33e5f5afa   6 days ago    5.57MB
+nginx        latest    12766a6745ee   13 days ago   142MB
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker stop 2d
+2d
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+28369ab0255707e30242a52891e2504b86dca7e0b0e8149bd393b4e0b78436ac
+f8c688e3ea622f6ed88bb3853e64f1ef44b9cf67420dec4dda75fc471538cb6a
+2d64b7784ea1c1c298510cc0bb3767db94065cf5ff727fcad345c3d73fc82ab5
+
+Total reclaimed space: 3.279kB
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker ima[K[K[Kimage r[K
+build    history  import   inspect  load     ls       prune    pull     push     rm       save     tag      
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker image rm ubuntu:latest alpine:latest nginx:latest 
+Untagged: ubuntu:latest
+Untagged: ubuntu@sha256:9101220a875cee98b016668342c489ff0674f247f6ca20dfc91b91c0f28581ae
+Deleted: sha256:825d55fb6340083b06e69e02e823a02918f3ffb575ed2a87026d4645a7fd9e1b
+Deleted: sha256:c5ec52c98b3193052e15d783aca2bef10d8d829fa0d58fedfede511920b8f997
+Untagged: alpine:latest
+Untagged: alpine@sha256:4edbd2beb5f78b1014028f4fbb99f3237d9561100b6881aabbf5acce2c4f9454
+Deleted: sha256:0ac33e5f5afa79e084075e8698a22d574816eea8d7b7d480586835657c3e1c8b
+Deleted: sha256:4fc242d58285699eca05db3cc7c7122a2b8e014d9481f323bd9277baacfa0628
+Untagged: nginx:latest
+Untagged: nginx@sha256:2275af0f20d71b293916f1958f8497f987b8d8fd8113df54635f2a5915002bf1
+Deleted: sha256:12766a6745eea133de9fdcd03ff720fa971fdaf21113d4bc72b417c123b15619
+Deleted: sha256:3ea962f6f388096ab9798790d363fc6f9c779c924a5eddf5c699d8da080114f7
+Deleted: sha256:091a2aef7242e42505b69f1ad027d6a442cfce2403e260ac914f0fd6cc2d275f
+Deleted: sha256:4e72a31f1cd6fd655cc0826c91e886967b6e965e13ac21f31f9f66c27a3b7732
+Deleted: sha256:e3d1cdf9772a260b3e81a22c1940d63ac45dfe67720f78f00ca73834d9498934
+Deleted: sha256:af40da71a8618ea9cbcdc333d5e60bd5b6df820f0d07a55f7c9a1c21fd930095
+Deleted: sha256:608f3a074261105f129d707e4d9ad3d41b5baa94887f092b7c2857f7274a2fce
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker ps-a[K[K -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ exit
+
+Script done on 2022-04-11 20:42:18+03:00 [COMMAND_EXIT_CODE="0"]

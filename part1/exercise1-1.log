@@ -1,0 +1,24 @@
+Script started on 2022-04-11 20:39:42+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="231" LINES="54"]
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker run -d nginx
+2d64b7784ea1c1c298510cc0bb3767db94065cf5ff727fcad345c3d73fc82ab5
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker run -d nginx
+f8c688e3ea622f6ed88bb3853e64f1ef44b9cf67420dec4dda75fc471538cb6a
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker run -d nginx
+28369ab0255707e30242a52891e2504b86dca7e0b0e8149bd393b4e0b78436ac
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+28369ab02557   nginx     "/docker-entrypoint.…"   3 seconds ago   Up 2 seconds   80/tcp    relaxed_gauss
+f8c688e3ea62   nginx     "/docker-entrypoint.…"   4 seconds ago   Up 3 seconds   80/tcp    bold_johnson
+2d64b7784ea1   nginx     "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   80/tcp    romantic_cartwright
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker stop 28
+28
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker stop f8
+f8
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS     NAMES
+28369ab02557   nginx     "/docker-entrypoint.…"   18 seconds ago   Exited (0) 8 seconds ago             relaxed_gauss
+f8c688e3ea62   nginx     "/docker-entrypoint.…"   19 seconds ago   Exited (0) 5 seconds ago             bold_johnson
+2d64b7784ea1   nginx     "/docker-entrypoint.…"   21 seconds ago   Up 20 seconds              80/tcp    romantic_cartwright
+]0;tuomas@box: ~/learn/devops-with-docker[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker[00m$ exit
+
+Script done on 2022-04-11 20:40:31+03:00 [COMMAND_EXIT_CODE="0"]

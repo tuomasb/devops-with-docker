@@ -1,0 +1,6 @@
+Script started on 2022-04-11 23:39:46+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="176" LINES="45"]
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ docker run -p 8080:8080 devopsdockeruh/simple-web-service server[C[1@-[1@d[1@ 
+e560bf5d64b79e62db79832db8fb0e24bac13f3c10588230030b1a627d5cf31c
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ exit
+
+Script done on 2022-04-11 23:40:17+03:00 [COMMAND_EXIT_CODE="0"]

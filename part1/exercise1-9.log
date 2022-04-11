@@ -1,0 +1,14 @@
+Script started on 2022-04-11 23:33:03+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="176" LINES="45"]
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ rouch ~[K[K[K[K[K[K[Ktouch ~/docker/text.log
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ touch ~/docker/text.log[3Pcat exercise1-9.log ls[Kdocker kill 30cat ~/docker/text.log [8Pdocker logs 30run -d -v /home/tuomas/docker/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[64Pcd ../learn/devops-with-docker/part1/docker run -d -v /home/tuomas/docker/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service
+541fa65994decf982a99328f80c3604ca7f89cf7bed41a96f9adee05baaf7ecc
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ tail -f ~/docker/tee[Kc[Kxt.log 
+2022-04-11 20:33:19 +0000 UTC
+2022-04-11 20:33:21 +0000 UTC
+2022-04-11 20:33:23 +0000 UTC
+2022-04-11 20:33:25 +0000 UTC
+2022-04-11 20:33:27 +0000 UTC
+^C
+]0;tuomas@box: ~/learn/devops-with-docker/part1[01;32mtuomas@box[00m:[01;34m~/learn/devops-with-docker/part1[00m$ exit
+
+Script done on 2022-04-11 23:33:28+03:00 [COMMAND_EXIT_CODE="130"]

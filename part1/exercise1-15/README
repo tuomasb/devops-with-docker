@@ -1,0 +1,3 @@
+Extremely simple and stupid Flask test app. Run with
+
+# docker run -d -p 8000:8000 tuomasb/flask

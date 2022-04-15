@@ -1,0 +1,62 @@
+version: '3.3'
+
+services:
+  frontend:
+    build: example-frontend
+    ports:
+      - 5000:5000
+    networks:
+      - proxy-network
+    container_name: frontend
+    environment:
+      - REACT_APP_BACKEND_URL=http://127.0.0.1:80/api/
+    #Override the command to rebuild the project didn't find a way to override ENV at build time?
+    command: bash -c 'npm run build && serve -s -l 5000 build'
+
+  backend:
+    build: example-backend
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS_HOST=redis-service
+      - POSTGRES_HOST=postgres-db
+      - POSTGRES_PASSWORD=supersecret
+      - REQUEST_ORIGIN=http://127.0.0.1/
+    networks:
+      - database-network
+      - proxy-network
+    container_name: backend
+
+  reverse-proxy:
+    image: nginx
+    networks:
+      - proxy-network
+    volumes:
+      - /home/tuomas/docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+
+  redis:
+    image: redis
+    container_name: redis-service
+    networks:
+      - database-network
+
+  postgres-db:
+    image: postgres
+    container_name: postgres-db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - database-network
+    environment:
+      - POSTGRES_PASSWORD=supersecret
+
+networks:
+  database-network:
+  proxy-network:
+  
+volumes:
+  postgres-data:
+

@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  frontend:
+    image: frontend
+    ports:
+      - 5000:5000
+
+  backend:
+    image: backend
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS_HOST=redis-service
+    networks:
+      - database-network
+
+  redis:
+    image: redis
+    container_name: redis-service
+    networks:
+      - database-network
+
+networks:
+  database-network:
+  

@@ -1,0 +1,1 @@
+Everything worked with my previous docker-compose.yaml because I had already fixed the REACT_BACKEND_URL by doing a rebuild with CMD and fixed the CORS-headers sent by backend with environment variables

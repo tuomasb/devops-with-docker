@@ -1,0 +1,1 @@
+Simple docker-compose.yaml for a Flask python project to provide postgres in one container and serve the Flask app from another container. Backend mounted as a bind mount from my local machine so I can use live reload feature of flask (FLASK_ENV=development flask run) without rebuilding the docker image.

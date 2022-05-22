@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  flask-dev:
+    build: .
+    container_name: flask
+    volumes:
+      - /home/tuomas/dev/flask-test:/flask
+    #Override the command to rebuild the project didn't find a way to override ENV at build time?
+    command: bash -c 'FLASK_ENV=development flask run'
+
+  postgres-db:
+    image: postgres
+    container_name: postgres-db
+    ports:
+      - 5432:5432
+    volumes:
+      - /home/tuomas/docker/database:/database
+    restart: unless-stopped

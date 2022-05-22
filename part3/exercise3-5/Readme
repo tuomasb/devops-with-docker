@@ -1,0 +1,2 @@
+Frontend before (node:lts based) 1.53GB after (node:alpine based) 487MB
+Backend before (golang:latest based) 1.12GB after (golang:alpine3.15) 482MB

@@ -1,0 +1,28 @@
+FROM ubuntu:18.04
+
+EXPOSE 8000
+
+WORKDIR /usr/src/app
+COPY . .
+
+ENV PORT=8000
+ENV REQUEST_ORIGIN=http://127.0.0.1:5000
+ENV PATH=$PATH:/usr/local/go/bin
+
+RUN apt-get update && apt-get -y upgrade && \
+    apt-get install -y curl && \
+    curl -sL https://go.dev/dl/go1.18.2.linux-amd64.tar.gz -o go1.18.2.linux-amd64.tar.gz && \
+    tar xfz go1.18.2.linux-amd64.tar.gz -C /usr/local && rm go1.18.2.linux-amd64.tar.gz && \
+    apt-get purge -y --auto-remove curl && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m go
+
+RUN chown go /usr/src/app
+
+USER go
+
+RUN go build
+
+CMD ./server
+

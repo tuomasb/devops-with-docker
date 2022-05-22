@@ -1,0 +1,25 @@
+FROM golang:alpine3.15 as builder
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+ENV REQUEST_ORIGIN=http://127.0.0.1:5000
+
+RUN adduser -D go && chown go /usr/src/app && go build
+
+FROM alpine:latest
+
+ENV PORT=8000
+
+WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app/server .
+
+RUN adduser -D go
+USER go
+
+
+CMD ./server
+

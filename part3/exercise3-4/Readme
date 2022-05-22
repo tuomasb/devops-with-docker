@@ -1,0 +1,4 @@
+I used node:lts for the Frontend and golang:latest for the backend in the part1 exercises instead of ubuntu:18.04.
+
+Frontend (node:lts based) before 1.24GB after (ubuntu:18.04) 457MB
+Backend (golang:latest based) before 1.12GB and after (ubuntu:18.04) 656MB

@@ -1,0 +1,2 @@
+Frontend before (node:14-alpine) 491MB after multi-stage with nginx:alpine 24.6MB 
+Backend before (golang:alpine) 482MB after multi-stage with alpine:latest 23.4MB

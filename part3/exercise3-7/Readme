@@ -1,0 +1,8 @@
+I optimized my flask test app
+https://github.com/tuomasb/flask
+
+Before python:latest 932MB
+After python:alpine3.15 60.5MB
+
+No binary wheels in the project so alpine can be used. If there were manylinux python wheels we could run into trouble since alpine uses musl and binaries linked against that.
+Also changed the user running gunicorn from root to web
